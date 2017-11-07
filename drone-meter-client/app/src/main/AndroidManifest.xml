@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
-    <uses-feature android:name="android.hardware.bluetooth.le" android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth.le"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +16,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".AppSingleton">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BluetoothActivity"></activity>
+        <activity android:name=".BluetoothActivity" />
+        <activity android:name=".ListOfMeasurementsActivity" />
+        <activity android:name=".AddMeasurementActivity" />
+        <activity android:name=".DetailedMeasurementActivity"></activity>
     </application>
 
 </manifest>
